@@ -1,0 +1,14 @@
+{
+  "name": "bun-push",
+  "version": "1.0.0",
+  "description": "BunJS push message service for WeChat Work",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch run index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

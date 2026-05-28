@@ -1,0 +1,7 @@
+node_modules
+.git
+.env
+*.log
+test.ps1
+test2.ps1
+token.db
