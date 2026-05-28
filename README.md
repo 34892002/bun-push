@@ -97,6 +97,25 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
+### GitHub Packages
+
+推送到 GitHub 后自动构建 Docker 镜像并发布到 GitHub Packages。
+
+```bash
+# 拉取镜像
+docker pull ghcr.io/34892002/bun-push:latest
+
+# 运行容器
+docker run -p 8080:8080 \
+  -e SENDKEY=your_sendkey \
+  -e WECOM_CID=your_cid \
+  -e WECOM_SECRET=your_secret \
+  -e WECOM_AID=your_aid \
+  ghcr.io/34892002/bun-push:latest
+```
+
+**说明：** 推送到 `main` 分支时会同时生成 `main` 和 `latest` 标签，推荐使用 `latest` 标签。
+
 ## 部署说明
 
 1. 在企业微信管理后台创建应用，获取 `CorpID`、`Secret`、`AgentId`
