@@ -116,6 +116,17 @@ docker run -p 8080:8080 \
 
 **说明：** 推送到 `main` 分支时会同时生成 `main` 和 `latest` 标签，推荐使用 `latest` 标签。
 
+**使用 Docker Compose：**
+
+```bash
+# 使用 GitHub Packages 镜像（推荐）
+docker compose up -d
+
+# 使用本地 Dockerfile 构建
+docker compose -f compose.build.yml up -d
+
+```
+
 ## 部署说明
 
 1. 在企业微信管理后台创建应用，获取 `CorpID`、`Secret`、`AgentId`
