@@ -160,7 +160,7 @@ const server = serve({
   port: 8080,
   async fetch(request) {
     const url = new URL(request.url);
-    if (url.pathname === "/wecomchan") {
+    if (url.pathname === "/workwx") {
       // 从查询参数获取sendkey
       const sendkey = url.searchParams.get("sendkey");
       if (!sendkey || sendkey !== SENDKEY) {

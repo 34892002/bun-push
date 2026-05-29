@@ -23,7 +23,7 @@
 
 ## API 端点
 
-### `POST /wecomchan`
+### `POST /workwx`
 
 推送消息接口，请求格式为 `application/json`。
 
@@ -40,12 +40,12 @@
 
 ```bash
 # 文本消息
-curl -X POST "http://localhost:8080/wecomchan?sendkey=your_sendkey" \
+curl -X POST "http://localhost:8080/workwx?sendkey=your_sendkey" \
   -H "Content-Type: application/json" \
   -d '{"msg": "Hello", "msg_type": "text"}'
 
 # 图片消息
-curl -X POST "http://localhost:8080/wecomchan?sendkey=your_sendkey" \
+curl -X POST "http://localhost:8080/workwx?sendkey=your_sendkey" \
   -H "Content-Type: application/json" \
   -d '{"msg_type": "image", "image_base64": "/9j/4AAQSkZJRgABAQEASABIAAD...", "image_filename": "test.jpg"}'
 ```
